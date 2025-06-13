@@ -26,7 +26,7 @@
       padding: 15px 20px;
       display: flex;
       align-items: center;
-      gap: 15px;
+      justify-content: space-between;
       position: relative;
     }
 
@@ -37,7 +37,21 @@
     }
 
     .header-title {
-      font-size: 20px;
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .header-title h1 {
+      margin-bottom: 5px;
+    }
+
+    .audio-player {
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0;
+      border-radius: 30px;
+      padding: 5px 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
     nav {
@@ -152,19 +166,16 @@
       padding: 20px;
     }
 
-    /* Audio Player Style */
-    .audio-player {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 9999;
-      background-color: #f0f0f0;
-      border-radius: 30px;
-      padding: 5px 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-    @media (max-width: 600px) {
+      .audio-player {
+        margin-top: 10px;
+      }
+
       .hero {
         font-size: 24px;
         height: 200px;
@@ -172,12 +183,6 @@
 
       .slide img {
         height: 180px;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
       }
     }
   </style>
@@ -192,15 +197,13 @@
       <h1>Universitas Teknologi Digital</h1>
       <p>Gerbang Masa Depan Digital Indonesia</p>
     </div>
+    <div class="audio-player">
+      <audio controls>
+        <source src="musik.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung pemutar audio.
+      </audio>
+    </div>
   </header>
-
-  <!-- Tombol Musik -->
-  <div class="audio-player">
-    <audio controls>
-      <source src="musik.mp3" type="audio/mpeg">
-      Browser Anda tidak mendukung pemutar audio.
-    </audio>
-  </div>
 
   <nav>
     <a href="#">Beranda</a>
