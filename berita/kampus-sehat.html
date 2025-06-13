@@ -15,7 +15,9 @@
       height: 100%;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f4f4f4;
-      color: #333;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
     }
@@ -25,42 +27,28 @@
       color: white;
       padding: 15px 20px;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .logo-title {
-      display: flex;
-      align-items: center;
-      gap: 15px;
     }
 
     .logo {
-      background-color: white;
-      color: #002366;
-      padding: 5px 10px;
-      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .logo img {
       height: 50px;
     }
 
-    .header-title h1 {
-      font-size: 20px;
-      margin-bottom: 4px;
-    }
-
-    .header-title p {
+    .logo-text {
+      display: flex;
+      flex-direction: column;
       font-size: 14px;
     }
 
-    .music-button {
-      background-color: #eee;
-      padding: 6px 12px;
-      border-radius: 20px;
-      margin-top: 10px;
+    .logo-text strong {
+      font-size: 18px;
     }
 
     main {
@@ -118,48 +106,28 @@
       padding: 20px;
       font-size: 14px;
     }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      .header-title h1 {
-        font-size: 18px;
-      }
-
-      .music-button {
-        margin-left: auto;
-      }
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo-title">
-      <div class="logo">
-        <img src="logo.png" alt="Logo UTD" />
-      </div>
-      <div class="header-title">
-        <h1>Universitas Teknologi Digital</h1>
-        <p>Gerbang Masa Depan Digital Indonesia</p>
+    <div class="logo">
+      <img src="logo-utd.png" alt="Logo UTD" />
+      <div class="logo-text">
+        <strong>Universitas Teknologi Digital</strong>
+        <span>Kampus Inovatif Masa Depan</span>
       </div>
     </div>
-    <div class="music-button">
-      <audio controls>
-        <source src="musik.mp3" type="audio/mpeg" />
-        Browser Anda tidak mendukung pemutar audio.
-      </audio>
-    </div>
+    <audio autoplay loop hidden>
+      <source src="backsound.mp3" type="audio/mpeg" />
+      Browser Anda tidak mendukung audio.
+    </audio>
   </header>
 
   <main>
     <div class="content-box">
       <img src="kampus-sehat.jpg" alt="Kegiatan Kampus Sehat">
-      <h2>Kampus Sehat 2025</h2>
+      <h2>Kegiatan Kampus Sehat</h2>
       <p><strong>Jumat, 13 Juni 2025 – Aula Kampus Universitas Teknologi Digital</strong></p>
       <p>Universitas Teknologi Digital (UTD) menggelar kegiatan “Kampus Sehat 2025” yang diadakan pada Jumat, 13 Juni 2025 bertempat di Aula Kampus. Acara ini diselenggarakan oleh Himpunan Mahasiswa Teknik Industri (HMTI) dan bertujuan meningkatkan kesadaran mahasiswa tentang pentingnya menjaga kesehatan fisik dan mental di lingkungan akademik.</p>
       <p>Pemeriksaan kesehatan gratis, senam pagi, serta edukasi gizi dan kesehatan mental menjadi bagian dari rangkaian acara. Para peserta sangat antusias mengikuti kegiatan yang dinilai mampu meningkatkan produktivitas dan kebugaran mahasiswa.</p>
