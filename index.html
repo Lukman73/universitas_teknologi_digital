@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Teknologi Digital</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #002366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0047ab;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: url('campus.jpg') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      color: #002366;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .news-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .news-card .content {
+      padding: 15px;
+    }
+
+    footer {
+      background-color: #002366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        font-size: 24px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Universitas Teknologi Digital</h1>
+    <p>Gerbang Masa Depan Digital Indonesia</p>
+  </header>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Profil</a>
+    <a href="#">Berita</a>
+    <a href="#">Akademik</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <div class="hero">
+    Selamat Datang di UTD
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h2>Berita Terkini</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <img src="berita1.jpg" alt="Berita 1" />
+          <div class="content">
+            <h3>Wisuda 2025 Berlangsung Meriah</h3>
+            <p>Digelar di auditorium kampus utama, ribuan wisudawan diwisuda secara hybrid.</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <img src="berita2.jpg" alt="Berita 2" />
+          <div class="content">
+            <h3>Dosen UTD Raih Penghargaan Internasional</h3>
+            <p>Dr. Rizky mendapatkan penghargaan riset AI di Korea Selatan.</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <img src="berita3.jpg" alt="Berita 3" />
+          <div class="content">
+            <h3>Penerimaan Mahasiswa Baru Telah Dibuka!</h3>
+            <p>UTD membuka pendaftaran untuk semester ganjil tahun akademik 2025/2026.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Universitas Teknologi Digital. Semua hak dilindungi.
+  </footer>
+
+</body>
+</html>
