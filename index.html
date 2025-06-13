@@ -23,8 +23,23 @@
     header {
       background-color: #002366;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      background-color: white;
+      color: #002366;
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+
+    .header-title {
+      font-size: 20px;
     }
 
     nav {
@@ -73,7 +88,6 @@
       color: #002366;
     }
 
-    /* Slider container */
     .slider-wrapper {
       width: 100%;
       max-width: 800px;
@@ -149,14 +163,23 @@
       .slide img {
         height: 180px;
       }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Universitas Teknologi Digital</h1>
-    <p>Gerbang Masa Depan Digital Indonesia</p>
+    <div class="logo">Logo UTD</div>
+    <div class="header-title">
+      <h1>Universitas Teknologi Digital</h1>
+      <p>Gerbang Masa Depan Digital Indonesia</p>
+    </div>
   </header>
 
   <nav>
