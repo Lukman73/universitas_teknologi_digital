@@ -28,6 +28,12 @@
       color: white;
       padding: 1rem 2rem;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .banner-left {
+      display: flex;
       align-items: center;
     }
 
@@ -35,11 +41,6 @@
       height: 60px;
       margin-right: 1rem;
       border-radius: 8px;
-    }
-
-    .banner-text {
-      display: flex;
-      flex-direction: column;
     }
 
     .banner-text h1 {
@@ -50,6 +51,12 @@
     .banner-text p {
       font-size: 1rem;
       font-style: italic;
+    }
+
+    .banner-theme {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffc107;
     }
 
     main {
@@ -67,19 +74,12 @@
 
     .berita-utama h2 {
       color: #002147;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     .berita-utama p {
       color: #333;
       line-height: 1.6;
-      margin-bottom: 0.8rem;
-    }
-
-    .berita-utama a {
-      color: #002147;
-      text-decoration: underline;
-      font-weight: bold;
     }
 
     footer {
@@ -94,21 +94,22 @@
 <body>
   <div class="wrapper">
     <div class="banner">
-      <img src="logo.png" alt="Logo Digitech" />
-      <div class="banner-text">
-        <h1>Digitech University</h1>
-        <p>Gerbang Peradaban Digital</p>
+      <div class="banner-left">
+        <img src="logo.png" alt="Logo Digitech" />
+        <div class="banner-text">
+          <h1>Digitech University</h1>
+          <p>Gerbang Peradaban Digital</p>
+        </div>
       </div>
+      <div class="banner-theme">Info Terkini Digitech</div>
     </div>
 
     <main>
-      <!-- Mulai berita -->
       <div class="berita-utama">
-        <h2>Pemeriksaan Kesehatan di Kampus</h2>
-        <p>Jumat, 13 Juni 2025 — Digitech University mengadakan pemeriksaan kesehatan oleh Himpunan Mahasiswa Teknik Industri.</p>
-        <a href="berita.html">Baca selengkapnya...</a>
+        <h2>Kesehatan Gratis</h2>
+        <p>Hari ini, Jumat 13 Juni 2025, kampus Digitech University mengadakan pemeriksaan kesehatan oleh Himpunan Mahasiswa Teknik Industri.</p>
+        <a href="berita.html" style="color: #002147; text-decoration: underline;">Baca selengkapnya...</a>
       </div>
-      <!-- Tambahkan berita lain di sini nanti -->
     </main>
 
     <footer>
