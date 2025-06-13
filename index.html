@@ -25,33 +25,40 @@
       color: white;
       padding: 15px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      position: relative;
+      align-items: center;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      background-color: white;
+      color: #002366;
+      padding: 5px 10px;
+      border-radius: 6px;
     }
 
     .logo img {
       height: 50px;
-      border: 2px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .header-title {
-      flex: 1;
-      margin-left: 20px;
     }
 
     .header-title h1 {
-      margin-bottom: 5px;
+      font-size: 20px;
+      margin-bottom: 4px;
     }
 
-    .audio-player {
-      display: flex;
-      align-items: center;
-      background-color: #f0f0f0;
-      border-radius: 30px;
-      padding: 5px 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    .header-title p {
+      font-size: 14px;
+    }
+
+    .music-button {
+      background-color: #eee;
+      padding: 6px 12px;
+      border-radius: 20px;
     }
 
     nav {
@@ -166,16 +173,7 @@
       padding: 20px;
     }
 
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .audio-player {
-        margin-top: 10px;
-      }
-
+    @media (max-width: 600px) {
       .hero {
         font-size: 24px;
         height: 200px;
@@ -184,22 +182,30 @@
       .slide img {
         height: 180px;
       }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="Logo UTD" />
+    <div class="logo-title">
+      <div class="logo">
+        <img src="logo.png" alt="Logo UTD" />
+      </div>
+      <div class="header-title">
+        <h1>Universitas Teknologi Digital</h1>
+        <p>Gerbang Masa Depan Digital Indonesia</p>
+      </div>
     </div>
-    <div class="header-title">
-      <h1>Universitas Teknologi Digital</h1>
-      <p>Gerbang Masa Depan Digital Indonesia</p>
-    </div>
-    <div class="audio-player">
+    <div class="music-button">
       <audio controls>
-        <source src="musik.mp3" type="audio/mpeg">
+        <source src="musik.mp3" type="audio/mpeg" />
         Browser Anda tidak mendukung pemutar audio.
       </audio>
     </div>
@@ -223,40 +229,13 @@
       <div class="slider-wrapper">
         <div class="slider">
           <div class="slide">
-            <img src="berita1.jpg" alt="Berita 1" />
+            <img src="kampus-sehat.jpg" alt="Kampus Sehat 2025" />
             <div class="content">
-              <h3>Wisuda 2025 Meriah</h3>
-              <p>Auditorium penuh semangat para wisudawan.</p>
+              <h3>Kampus Sehat 2025</h3>
+              <p><strong>Jumat, 13 Juni 2025</strong> - Bertempat di Aula Kampus Universitas Teknologi Digital, kegiatan pemeriksaan kesehatan oleh Himpunan Mahasiswa Teknik Industri berlangsung sukses untuk mendukung hidup sehat civitas kampus.</p>
             </div>
           </div>
-          <div class="slide">
-            <img src="berita2.jpg" alt="Berita 2" />
-            <div class="content">
-              <h3>Raih Penghargaan AI</h3>
-              <p>Dr. Rizky diundang ke Korea untuk presentasi riset AI.</p>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="berita3.jpg" alt="Berita 3" />
-            <div class="content">
-              <h3>Pendaftaran Mahasiswa Baru</h3>
-              <p>UTD membuka pendaftaran semester ganjil 2025/2026.</p>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="berita4.jpg" alt="Berita 4" />
-            <div class="content">
-              <h3>Unit Inkubator Startup</h3>
-              <p>Mahasiswa bisa langsung membangun startup dari kampus.</p>
-            </div>
-          </div>
-          <div class="slide">
-            <img src="berita5.jpg" alt="Berita 5" />
-            <div class="content">
-              <h3>Program Merdeka Belajar</h3>
-              <p>Kerja sama industri dan startup makin luas.</p>
-            </div>
-          </div>
+          <!-- Slide berita lainnya bisa ditambahkan di sini -->
         </div>
       </div>
     </div>
