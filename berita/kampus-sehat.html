@@ -1,50 +1,176 @@
-<style>
-  html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f1f1f1;
-  }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kampus Sehat 2025 - Universitas Teknologi Digital</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-  }
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+    }
 
-  .content-box {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
+    header {
+      background-color: #002366;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-  footer {
-    background-color: #002366;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-  }
-</style>
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
+    .logo {
+      background-color: white;
+      color: #002366;
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .header-title h1 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .header-title p {
+      font-size: 14px;
+    }
+
+    .music-button {
+      background-color: #eee;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+
+    .content-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .content-box img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .content-box h2 {
+      margin-bottom: 10px;
+      color: #002366;
+    }
+
+    .content-box p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #0047ab;
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #003080;
+    }
+
+    footer {
+      background-color: #002366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .header-title h1 {
+        font-size: 18px;
+      }
+
+      .music-button {
+        margin-left: auto;
+      }
+    }
+  </style>
+</head>
 <body>
+
+  <header>
+    <div class="logo-title">
+      <div class="logo">
+        <img src="logo.png" alt="Logo UTD" />
+      </div>
+      <div class="header-title">
+        <h1>Universitas Teknologi Digital</h1>
+        <p>Gerbang Masa Depan Digital Indonesia</p>
+      </div>
+    </div>
+    <div class="music-button">
+      <audio controls>
+        <source src="musik.mp3" type="audio/mpeg" />
+        Browser Anda tidak mendukung pemutar audio.
+      </audio>
+    </div>
+  </header>
+
   <main>
     <div class="content-box">
-      <h2>🩺Kegiatan Kampus Sehat</h2>
+      <img src="kampus-sehat.jpg" alt="Kegiatan Kampus Sehat">
+      <h2>Kampus Sehat 2025</h2>
       <p><strong>Jumat, 13 Juni 2025 – Aula Kampus Universitas Teknologi Digital</strong></p>
-      <p>Universitas Teknologi Digital (UTD) menggelar kegiatan “Kampus Sehat 2025” ...</p>
-      <!-- isi lengkap seperti sebelumnya -->
-      <p><a href="index.html" class="btn">🔙 Kembali ke Beranda</a></p>
+      <p>Universitas Teknologi Digital (UTD) menggelar kegiatan “Kampus Sehat 2025” yang diadakan pada Jumat, 13 Juni 2025 bertempat di Aula Kampus. Acara ini diselenggarakan oleh Himpunan Mahasiswa Teknik Industri (HMTI) dan bertujuan meningkatkan kesadaran mahasiswa tentang pentingnya menjaga kesehatan fisik dan mental di lingkungan akademik.</p>
+      <p>Pemeriksaan kesehatan gratis, senam pagi, serta edukasi gizi dan kesehatan mental menjadi bagian dari rangkaian acara. Para peserta sangat antusias mengikuti kegiatan yang dinilai mampu meningkatkan produktivitas dan kebugaran mahasiswa.</p>
+      <p>Kegiatan ini diharapkan menjadi agenda rutin tahunan untuk mendukung terciptanya lingkungan kampus yang sehat dan produktif.</p>
+      <a href="index.html" class="btn">🔙 Kembali ke Beranda</a>
     </div>
   </main>
 
   <footer>
     &copy; 2025 Universitas Teknologi Digital. Semua hak dilindungi.
   </footer>
+
 </body>
+</html>
