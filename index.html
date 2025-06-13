@@ -30,6 +30,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .banner-left {
@@ -37,10 +38,16 @@
       align-items: center;
     }
 
-    .banner img {
+    .banner-left img {
       height: 60px;
       margin-right: 1rem;
+      max-width: 100%;
       border-radius: 8px;
+    }
+
+    .banner-text {
+      display: flex;
+      flex-direction: column;
     }
 
     .banner-text h1 {
@@ -53,20 +60,15 @@
       font-style: italic;
     }
 
-    @keyframes kedapKedip {
-      0%, 49%, 100% {
-        opacity: 1;
-      }
+    .banner-theme {
+      font-size: 1.1rem;
+      animation: blink 1s step-start 0s infinite;
+    }
+
+    @keyframes blink {
       50% {
         opacity: 0;
       }
-    }
-
-    .banner-theme {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #ffc107;
-      animation: kedapKedip 1s infinite;
     }
 
     main {
@@ -92,12 +94,54 @@
       line-height: 1.6;
     }
 
+    .berita-utama a {
+      color: #002147;
+      text-decoration: underline;
+    }
+
     footer {
       background-color: #002147;
       color: white;
       text-align: center;
       padding: 0.8rem;
       font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .banner-left {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .banner-left img {
+        height: 50px;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .banner-text h1 {
+        font-size: 1.4rem;
+      }
+
+      .banner-theme {
+        align-self: center;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .berita-utama {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -118,7 +162,7 @@
       <div class="berita-utama">
         <h2>Kesehatan Gratis</h2>
         <p>Hari ini, Jumat 13 Juni 2025, kampus Digitech University mengadakan pemeriksaan kesehatan oleh Himpunan Mahasiswa Teknik Industri.</p>
-        <a href="berita.html" style="color: #002147; text-decoration: underline;">Baca selengkapnya...</a>
+        <a href="berita.html">Baca selengkapnya...</a>
       </div>
     </main>
 
