@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Website dengan Logo & Footer Tetap</title>
+  <title>Digitech University</title>
   <style>
     * {
       margin: 0;
@@ -36,8 +36,19 @@
       margin-right: 1rem;
     }
 
-    .banner h1 {
+    .banner-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .banner-text h1 {
       font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .banner-text p {
+      font-size: 1rem;
+      font-style: italic;
     }
 
     main {
@@ -58,7 +69,10 @@
   <div class="wrapper">
     <div class="banner">
       <img src="logo.png" alt="Logo Digitech" />
-      <h1>Digitech University</h1>
+      <div class="banner-text">
+        <h1>Digitech University</h1>
+        <p>Gerbang Peradaban Digital</p>
+      </div>
     </div>
 
     <main>
