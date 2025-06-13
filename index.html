@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Header dan Footer Seragam</title>
+  <title>Website dengan Logo & Footer Tetap</title>
   <style>
     * {
       margin: 0;
@@ -18,37 +18,56 @@
     }
 
     .wrapper {
-      min-height: 100%;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
-    .banner, footer {
+    .banner {
       background-color: #002147; /* Biru tua */
       color: white;
-      text-align: center;
-      padding: 2rem;
-      font-size: 1.2rem;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .banner img {
+      height: 60px;
+      margin-right: 1rem;
+    }
+
+    .banner h1 {
+      font-size: 1.8rem;
     }
 
     main {
       flex: 1;
       padding: 2rem;
     }
+
+    footer {
+      background-color: #002147;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.1rem;
+    }
   </style>
 </head>
 <body>
   <div class="wrapper">
     <div class="banner">
-      <h1>Selamat Datang di Universitas Teknologi Digital</h1>
+      <img src="logo.png" alt="Logo Digitech" />
+      <h1>Selamat Datang di Website Saya</h1>
     </div>
 
     <main>
-      <p>Ini adalah isi utama halaman. Di sinilah konten utama ditampilkan.</p>
+      <p>Ini adalah konten utama halaman.</p>
+      <p>Silakan menambahkan teks, gambar, atau fitur lain sesuai kebutuhan Anda.</p>
     </main>
 
     <footer>
-      &copy; 2025 Digitech University
+      &copy; 2025 Digitech University. Hak cipta dilindungi.
     </footer>
   </div>
 </body>
