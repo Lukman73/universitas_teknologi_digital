@@ -28,10 +28,17 @@
       color: white;
       padding: 1rem 2rem;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .banner-left {
+      display: flex;
       align-items: center;
     }
 
-    .banner img {
+    .banner-left img {
       height: 60px;
       margin-right: 1rem;
       max-width: 100%;
@@ -53,6 +60,17 @@
       font-style: italic;
     }
 
+    .banner-theme {
+      font-size: 1.1rem;
+      animation: blink 1s step-start 0s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
     main {
       flex: 1;
       padding: 2rem;
@@ -63,17 +81,36 @@
       border-radius: 10px;
       padding: 2rem;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .isi-berita h2 {
       color: #002147;
       margin-bottom: 1rem;
+      text-align: center;
     }
 
     .isi-berita p {
       color: #333;
       line-height: 1.8;
       margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .gambar-berita {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .gambar-berita img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
     a.kembali {
@@ -83,21 +120,6 @@
       text-decoration: underline;
     }
 
-    .gambar-berita {
-      margin-bottom: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .gambar-berita img {
-      width: 200px;
-      height: auto;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-
     footer {
       background-color: #002147;
       color: white;
@@ -105,16 +127,55 @@
       padding: 0.8rem;
       font-size: 0.9rem;
     }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .banner-left {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .banner-left img {
+        height: 50px;
+        margin-bottom: 0.5rem;
+      }
+
+      .banner-text h1 {
+        font-size: 1.4rem;
+      }
+
+      .banner-theme {
+        align-self: center;
+        font-size: 1rem;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .isi-berita {
+        padding: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="wrapper">
     <div class="banner">
-      <img src="logo.png" alt="Logo Digitech" />
-      <div class="banner-text">
-        <h1>Digitech University</h1>
-        <p>Gerbang Peradaban Digital</p>
+      <div class="banner-left">
+        <img src="logo.png" alt="Logo Digitech" />
+        <div class="banner-text">
+          <h1>Digitech University</h1>
+          <p>Gerbang Peradaban Digital</p>
+        </div>
       </div>
+      <div class="banner-theme">Info Terkini Digitech</div>
     </div>
 
     <main>
@@ -122,14 +183,14 @@
         <div class="gambar-berita">
           <img src="gambar1.jpg" alt="Pemeriksaan Kesehatan" />
           <img src="gambar2.jpg" alt="Mahasiswa Antusias" />
-          <img src="gambar3.jpg" alt="Pemeriksaan Tekanan Darah" />
-          <img src="gambar4.jpg" alt="Pemeriksaan Tekanan Darah" />
+          <img src="gambar3.jpg" alt="Petugas Medis" />
         </div>
 
         <h2>Pemeriksaan Kesehatan di Kampus</h2>
         <p>Pada Jumat, 13 Juni 2025, Digitech University mengadakan kegiatan pemeriksaan kesehatan gratis bagi mahasiswa. Acara ini diselenggarakan oleh Himpunan Mahasiswa Teknik Industri.</p>
         <p>Pemeriksaan mencakup pengukuran tekanan darah, cek gula darah, dan konsultasi kesehatan. Para mahasiswa menyambut kegiatan ini dengan antusias karena menjadi bagian dari program kampus sehat dan peduli.</p>
         <p>Dengan kegiatan ini, diharapkan seluruh civitas akademika semakin peduli terhadap pentingnya menjaga kesehatan sejak dini.</p>
+
         <a class="kembali" href="index.html">← Kembali ke Beranda</a>
       </div>
     </main>
