@@ -16,9 +16,6 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f4f4f4;
       color: #333;
-    }
-
-    body {
       display: flex;
       flex-direction: column;
     }
@@ -28,41 +25,19 @@
       color: white;
       padding: 15px 20px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .header-left {
-      display: flex;
       align-items: center;
       gap: 15px;
+      position: relative;
     }
 
     .logo img {
       height: 50px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 2px;
-      background-color: white;
+      border: 2px solid #ccc;
+      border-radius: 5px;
     }
 
-    .header-title h1 {
-      margin-bottom: 4px;
-    }
-
-    .music-button {
-      background-color: white;
-      color: #002366;
-      border: none;
-      font-size: 18px;
-      padding: 10px 15px;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .music-button:hover {
-      background-color: #ddd;
+    .header-title {
+      font-size: 20px;
     }
 
     nav {
@@ -146,12 +121,16 @@
     @keyframes slide {
       0%   { transform: translateX(0); }
       20%  { transform: translateX(0); }
+
       25%  { transform: translateX(-100%); }
       40%  { transform: translateX(-100%); }
+
       45%  { transform: translateX(-200%); }
       60%  { transform: translateX(-200%); }
+
       65%  { transform: translateX(-300%); }
       80%  { transform: translateX(-300%); }
+
       85%  { transform: translateX(-400%); }
       100% { transform: translateX(-400%); }
     }
@@ -171,7 +150,18 @@
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: auto;
+    }
+
+    /* Audio Player Style */
+    .audio-player {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      background-color: #f0f0f0;
+      border-radius: 30px;
+      padding: 5px 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
     @media (max-width: 600px) {
@@ -187,11 +177,7 @@
       header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
-      }
-
-      .music-button {
-        align-self: flex-end;
+        gap: 5px;
       }
     }
   </style>
@@ -199,17 +185,22 @@
 <body>
 
   <header>
-    <div class="header-left">
-      <div class="logo">
-        <img src="logo.png" alt="Logo UTD" />
-      </div>
-      <div class="header-title">
-        <h1>Universitas Teknologi Digital</h1>
-        <p>Gerbang Masa Depan Digital Indonesia</p>
-      </div>
+    <div class="logo">
+      <img src="logo.png" alt="Logo UTD" />
     </div>
-    <button class="music-button" onclick="toggleMusic()">🎵</button>
+    <div class="header-title">
+      <h1>Universitas Teknologi Digital</h1>
+      <p>Gerbang Masa Depan Digital Indonesia</p>
+    </div>
   </header>
+
+  <!-- Tombol Musik -->
+  <div class="audio-player">
+    <audio controls>
+      <source src="musik.mp3" type="audio/mpeg">
+      Browser Anda tidak mendukung pemutar audio.
+    </audio>
+  </div>
 
   <nav>
     <a href="#">Beranda</a>
@@ -228,7 +219,6 @@
       <h2>Berita Terkini</h2>
       <div class="slider-wrapper">
         <div class="slider">
-          <!-- Slide isi berita seperti sebelumnya -->
           <div class="slide">
             <img src="berita1.jpg" alt="Berita 1" />
             <div class="content">
@@ -236,7 +226,34 @@
               <p>Auditorium penuh semangat para wisudawan.</p>
             </div>
           </div>
-          <!-- Tambahkan slide lainnya jika perlu -->
+          <div class="slide">
+            <img src="berita2.jpg" alt="Berita 2" />
+            <div class="content">
+              <h3>Raih Penghargaan AI</h3>
+              <p>Dr. Rizky diundang ke Korea untuk presentasi riset AI.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="berita3.jpg" alt="Berita 3" />
+            <div class="content">
+              <h3>Pendaftaran Mahasiswa Baru</h3>
+              <p>UTD membuka pendaftaran semester ganjil 2025/2026.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="berita4.jpg" alt="Berita 4" />
+            <div class="content">
+              <h3>Unit Inkubator Startup</h3>
+              <p>Mahasiswa bisa langsung membangun startup dari kampus.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="berita5.jpg" alt="Berita 5" />
+            <div class="content">
+              <h3>Program Merdeka Belajar</h3>
+              <p>Kerja sama industri dan startup makin luas.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -249,27 +266,6 @@
   <footer>
     &copy; 2025 Universitas Teknologi Digital. Semua hak dilindungi.
   </footer>
-
-  <!-- Audio -->
-  <audio id="bgm" loop>
-    <source src="musik.mp3" type="audio/mpeg" />
-    Browser Anda tidak mendukung audio HTML5.
-  </audio>
-
-  <!-- Script -->
-  <script>
-    const audio = document.getElementById("bgm");
-    let isPlaying = false;
-
-    function toggleMusic() {
-      if (isPlaying) {
-        audio.pause();
-      } else {
-        audio.play();
-      }
-      isPlaying = !isPlaying;
-    }
-  </script>
 
 </body>
 </html>
