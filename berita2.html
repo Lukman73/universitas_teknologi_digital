@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MABIT ke 8 - Digitech University</title>
+  <title>Info Terkini Digitech</title>
   <style>
     * {
       margin: 0;
@@ -28,10 +28,17 @@
       color: white;
       padding: 1rem 2rem;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .banner-left {
+      display: flex;
       align-items: center;
     }
 
-    .banner img {
+    .banner-left img {
       height: 60px;
       margin-right: 1rem;
       max-width: 100%;
@@ -51,6 +58,18 @@
     .banner-text p {
       font-size: 1rem;
       font-style: italic;
+      margin-top: 6px; /* Tambahan jarak antar baris */
+    }
+
+    .banner-theme {
+      font-size: 1.1rem;
+      animation: blink 1s step-start 0s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
     }
 
     main {
@@ -63,17 +82,36 @@
       border-radius: 10px;
       padding: 2rem;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .isi-berita h2 {
       color: #002147;
       margin-bottom: 1rem;
+      text-align: center;
     }
 
     .isi-berita p {
       color: #333;
       line-height: 1.8;
       margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .gambar-berita {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .gambar-berita img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
     a.kembali {
@@ -90,21 +128,59 @@
       padding: 0.8rem;
       font-size: 0.9rem;
     }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .banner-left {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .banner-left img {
+        height: 50px;
+        margin-bottom: 0.5rem;
+      }
+
+      .banner-text h1 {
+        font-size: 1.4rem;
+      }
+
+      .banner-theme {
+        align-self: center;
+        font-size: 1rem;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .isi-berita {
+        padding: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="wrapper">
     <div class="banner">
-      <img src="logo.png" alt="Logo Digitech" />
-      <div class="banner-text">
-        <h1>Digitech University</h1>
-        <p>Gerbang Peradaban Digital</p>
+      <div class="banner-left">
+        <img src="logo.png" alt="Logo Digitech" />
+        <div class="banner-text">
+          <h1>Digitech University</h1>
+          <p>Gerbang Peradaban Digital</p>
+        </div>
       </div>
+      <div class="banner-theme">Info Terkini Digitech</div>
     </div>
 
     <main>
       <div class="isi-berita">
-
         <div class="gambar-berita">
           <img src="gambar1.jpg" alt="Pemeriksaan Tekanan Darah" />
           <img src="gambar2.jpg" alt="Pemeriksaan Tekanan Darah" />
@@ -122,12 +198,12 @@
           <img src="gambar14.jpg" alt="Konsultasi" />
           <img src="gambar15.jpg" alt="Konsultasi" />
         </div>
-        
-        <h2>MABIT ke 8 - Digitech University</h2>
+
+        <h2>MABIT ke 8 - Digitech 
         <p>Dengan penuh rasa syukur, Digitech University kembali menyelenggarakan kegiatan Malam Bina Iman dan Taqwa (MABIT) yang ke-8 pada hari Sabtu, 21 Juni 2025. Kegiatan ini merupakan bagian dari upaya pembinaan karakter spiritual bagi mahasiswa, dosen, dan civitas akademika Digitech University agar semakin kokoh dalam nilai keimanan dan ketakwaan.</p>
         <p>Bertempat di lingkungan kampus yang penuh kekeluargaan, Mabit kali ini mengusung semangat “Menguatkan Hati, Menjernihkan Pikiran, dan Menyongsong Masa Depan dengan Cahaya Iman.” Rangkaian acara meliputi kajian ruhiyah, tilawah Qur’an, tahajud bersama, serta tausiyah yang menggugah jiwa.</p>
         <p>Mabit bukan sekadar bermalam di kampus, tetapi merupakan momentum untuk mendekatkan diri kepada Allah, mempererat ukhuwah, dan memperbaiki niat dalam menuntut ilmu. Semoga melalui kegiatan ini, tumbuh generasi Digitech yang tidak hanya cerdas secara intelektual, tetapi juga tangguh secara spiritual.</p>
-        <a class="kembali" href="index.html">? Kembali ke Beranda</a>
+        <a class="kembali" href="index.html">? Kembali ke Beranda</a>>
       </div>
     </main>
 
